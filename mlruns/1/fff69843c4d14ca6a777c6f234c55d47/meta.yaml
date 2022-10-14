@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/scardona/Documents/python/Spaceship%20Titanic/Spaceship_Titanic_Kedro/mlruns/1/fff69843c4d14ca6a777c6f234c55d47/artifacts
+end_time: 1665717479016
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: fff69843c4d14ca6a777c6f234c55d47
+run_uuid: fff69843c4d14ca6a777c6f234c55d47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1665717478943
+status: 3
+tags: []
+user_id: scardona
