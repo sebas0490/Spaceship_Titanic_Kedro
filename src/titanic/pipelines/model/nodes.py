@@ -10,6 +10,7 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.metrics import (accuracy_score, f1_score, precision_score,make_scorer,
                              r2_score, recall_score, confusion_matrix)
+import mlflow
 
 
 def divirDataTrain(X_transformed:pd.DataFrame,y_overS:pd.DataFrame):
@@ -27,6 +28,8 @@ def prediccion(decision_tree_modelTrain: DecisionTreeClassifier,X_Ttest:pd.DataF
 
 def validacionModel(y_Otest : pd.DataFrame,y_predTrain: pd.DataFrame):
     f1_score1 = f1_score(y_Otest , y_predTrain, average='macro')
+    mlflow.set_experiment("f1_score1")
+    mlflow.log_param('train_score', round(f1_score1, 2))
     return f1_score1
 
 def trainModelo(X_transformed:pd.DataFrame,y_overS:pd.DataFrame):

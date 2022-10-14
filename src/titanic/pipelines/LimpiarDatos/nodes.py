@@ -19,8 +19,8 @@ def eliminarduplicados(data_limpia: pd.DataFrame) -> pd.DataFrame:
 
 
 def eliminarNulos(datosSinDuplicados: pd.DataFrame,data_limTest:pd.DataFrame) -> Tuple[pd.DataFrame,pd.DataFrame]:
-    datos_limpios = datosSinDuplicados.dropna(subset=df.columns)
-    datosLimpiosTest = data_limTest.dropna(subset=df.columns)
+    datos_limpios = datosSinDuplicados.dropna(subset=datosSinDuplicados.columns)
+    datosLimpiosTest = data_limTest.dropna(subset=data_limTest.columns)
     return datos_limpios,datosLimpiosTest
 
 
