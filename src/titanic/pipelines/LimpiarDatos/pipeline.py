@@ -19,12 +19,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         node(
             func=eliminarduplicados,
             inputs='data_limpia',
-            outputs='datos_sinDuplicados'
-        ),
-        node(
-            func=eliminarNulos,
-            inputs=['datos_sinDuplicados','data_limTest'],
-            outputs=['datos_limpios','datosLimpiosTest']
+            outputs='datosSinDuplicados'
         )
 
 

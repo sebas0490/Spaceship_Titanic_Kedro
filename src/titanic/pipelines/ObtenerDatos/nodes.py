@@ -15,7 +15,7 @@ class Paths:
 
 
 def get_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
-    df_train = pd.read_csv(Paths.path_train, index_col=0, decimal='.')
-    df_test = pd.read_csv(Paths.path_test, index_col=0, decimal='.')
+    df_train = pd.read_csv(Paths.path_train,  decimal='.')
+    df_test = pd.read_csv(Paths.path_test, decimal='.')
 
     return ( df_train,df_test)

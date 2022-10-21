@@ -6,11 +6,19 @@ import pandas as pd
 from typing import Tuple
 
 
+
+
+
+
+
+
 def eliminarColumnas(df_train: pd.DataFrame,df_test: pd.DataFrame) -> pd.DataFrame:
-    data_limpia = df_train.drop('Name', axis=1)
-    data_limTest= df_test.drop('Name', axis=1)
+    data_limpia = df_train.drop(['Name', 'PassengerId'], axis=1)
+    data_limTest = df_test.drop('Name', axis=1)
 
     return data_limpia,data_limTest
+
+
 
 
 def eliminarduplicados(data_limpia: pd.DataFrame) -> pd.DataFrame:
@@ -18,9 +26,6 @@ def eliminarduplicados(data_limpia: pd.DataFrame) -> pd.DataFrame:
     return datosSinDuplicados
 
 
-def eliminarNulos(datosSinDuplicados: pd.DataFrame,data_limTest:pd.DataFrame) -> Tuple[pd.DataFrame,pd.DataFrame]:
-    datos_limpios = datosSinDuplicados.dropna(subset=datosSinDuplicados.columns)
-    datosLimpiosTest = data_limTest.dropna(subset=data_limTest.columns)
-    return datos_limpios,datosLimpiosTest
+
 
 
